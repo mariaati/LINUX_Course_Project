@@ -1,0 +1,49 @@
+    1  cd ~
+    2  mkdir -p LINUX_Course_Project/{DOWNLOADS,CODE,DATA,BACKUPS,Work/{Q1,Q2,Q3,Q4}}
+    3  ls -R LINUX_Course_Project
+    4  cd ~/LINUX_Course_Project
+    5  git init
+    6  git remote add origin https://github.com/mariaati/LINUX_Course_Project.git
+    7  git remote -v
+    8  wget -P DOWNLOADS https://github.com/Telhai-Git/LINUX_COURSE_WORK/archive/refs/tags/downloads.tar.gz
+    9  tar -xzvf DOWNLOADS/downloads.tar.gz -C DOWNLOADS
+   10  mv DOWNLOADS/LINUX_COURSE_WORK-downloads/* DOWNLOADS/
+   11  rm -r DOWNLOADS/LINUX_COURSE_WORK-downloads
+   12  rm DOWNLOADS/downloads.tar.gz
+   13  ls DOWNLOADS/
+   14  git add 
+   15  git add .
+   16  git commit -m "initial commit - settin up project structure and extracted files"
+   17  git config user.name "mariaati"
+   18  git config user.email "mariaatia36@gmail.com"
+   19  git commit -m "initial commit - settin up project structure and extracted files"
+   20  git checkout -b BR_Q1
+   21  git branch
+   22  mv DOWNLOADS/*.py CODE/
+   23  mv DOWNLOADS/*.{txt,jpg,csv} DATA/ 2>/dev/null
+   24  ls CODE/
+   25  ls DATA/
+   26  DATE=$(date +"%Y-%m-%d %H:%M:%S")
+   27  USER_DETAILS=$(grep "^$(whoami)" /etc/passwd)
+   28  REPO_PATH=$(pwd)
+   29  GITHUB_URL="https://github.com/mariaati/LINUX_Course_Project.git"
+   30  VERSION_ID=$(grep "VERSION_ID" /etc/os-release | cut -d '"' -f2)
+   31  printf "Time : $DATE\nUSER DETAILS: $USER_DETAILS\nREPO: $REPO_PATH\nGithubUrl: $GITHUB_URL\nVERSIONID: $VERSION_ID\n" > Work/Q1/q1_output.txt
+   32  cat Work/Q1/q1_output.txt
+   33  sudo apt update && sudo apt install tree -y
+   34  tree ~/LINUX_Course_Project | tee -a Work/Q1/q1_output.txt
+   35  cat Work/Q1/q1_output.txt
+   36  find ~ -type f -name "*.sh" >> Work/Q1/q1_output.txt
+   37  cat Work/Q1/q1_output.txt
+   38  git add .
+   39  git commit -m "completed first question - orgranized the files and generated q1_output.txt"
+   40  git checkout main
+   41  git branch
+   42  git branch -m master main
+   43  git branch
+   44  git checkout main
+   45  git merge BR_Q1
+   46  git log --oneline
+   47  git log --oneline > Work/Q1/git_commits.log
+   48  cat Work/Q1/git_commits.log
+   49  history > Work/Q1/linux_history.log
