@@ -1,0 +1,46 @@
+Time : 2025-03-12 21:07:30
+USER DETAILS: mariaati:x:1001:1001:maria atieh,1,1,1,1:/home/mariaati:/bin/bash
+REPO: /home/mariaati/LINUX_Course_Project
+GithubUrl: https://github.com/mariaati/LINUX_Course_Project.git
+VERSIONID: 24.04
+/home/mariaati/LINUX_Course_Project
+├── BACKUPS
+├── CODE
+│   ├── plant.py
+│   └── py1.py
+├── DATA
+│   ├── FIle_1.txt
+│   ├── File_2.txt
+│   ├── img1.jpg
+│   ├── img2.jpg
+│   ├── img3.jpg
+│   └── plants.csv
+├── DOWNLOADS
+└── Work
+    ├── Q1
+    │   └── q1_output.txt
+    ├── Q2
+    ├── Q3
+    └── Q4
+
+10 directories, 9 files
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/node_modules/jschardet/scripts/show-size-changes.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/node_modules/jschardet/scripts/run-workflow.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/out/vs/base/node/ps.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/out/vs/base/node/cpuUsage.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/askpass.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/git-editor.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/git-editor-empty.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/askpass-empty.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/ssh-askpass.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/git/dist/ssh-askpass-empty.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/scripts/clone-fig.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/scripts/update-specs.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/fixtures/shell-parser/multipleStatements/input.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/fixtures/shell-parser/basic/input.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/fixtures/shell-parser/variables/input.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/extensions/terminal-suggest/fixtures/shell-parser/primaryExpressions/input.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/bin/helpers/check-requirements.sh
+/home/mariaati/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/bin/helpers/browser.sh
