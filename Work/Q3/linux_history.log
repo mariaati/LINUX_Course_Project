@@ -1,0 +1,124 @@
+    1  git checkout main
+    2  git checkout -b BR_Q2
+    3  cp CODE/plant.py Work/Q2/
+    4  sudo apt update && sudo apt install python3-pip -y
+    5  pip install matplotlib
+    6  sudo apt update && sudo apt install python3-matplotlib -y
+    7  python3 -c "import matplotlib; print(matplotlib.__version__)"
+    8  cd Work/Q2/
+    9  python3 plant.py
+   10  mkdir -p Diagrams_1
+   11  mv *.png Diagrams_1/
+   12  tar -czvf BACKUPS/Diagrams_1_$(date +"%Y%m%d_%H%M%S").tar.gz Diagrams_1/
+   13  ls ~/LINUX_Course_Project/BACKUPS
+   14  tar -czvf ~/LINUX_Course_Project/BACKUPS/Diagrams_1_$(date +"%Y%m%d_%H%M%S").tar.gz Diagrams_1/
+   15  git add .
+   16  git commit -m "completed q2 first part: runnin plant.py, saved the diagrams and compressed imgs."
+   17  git checkout main
+   18  git merge BR_Q2
+   19  mv Work/Q2/plant.py Work/Q2/plant_plots.py
+   20  ls -l Work/Q2/
+   21  ls
+   22  mv Work/Q2/plant.py Work/Q2/plant_plots.py
+   23  ls -l
+   24  mv plant.py plant_plots.py
+   25  cp ~/LINUX_Course_Project/CODE/plant.py ~/LINUX_Course_Project/Work/Q2/
+   26  mv plant.py plant_plots.py
+   27  nano Work/Q2/plant_plots.py
+   28  cd ~/LINUX_Course_Project
+   29  nano Work/Q2/plant_plots.py
+   30  cat Work/Q2/plant_plots.py
+   31  pip install matplotlib argparse
+   32  sudo apt update && sudo apt install python3-matplotlib -y
+   33  pip freeze > Work/Q2/requirements.txt
+   34  pip uninstall -y -r Work/Q2/requirements.txt
+   35  sudo apt remove python3-matplotlib -y
+   36  sudo apt autoremove -y
+   37  pip install -r Work/Q2/requirements.txt
+   38  sudo apt install python3-venv -y
+   39  python3 -m venv venv
+   40  source venv/bin/activate
+   41  pip install -r Work/Q2/requirements.txt
+   42  pip install bcc --no-cache-dir
+   43  sudo apt update && sudo apt install bpfcc-tools -y
+   44  pip install -r Work/Q2/requirements.txt
+   45  pip show bcc
+   46  nano Work/Q2/requirements.txt
+   47  pip install -r Work/Q2/requirements.txt
+   48  sudo apt update && sudo apt install python3-brlapi -y
+   49  nano Work/Q2/requirements.txt
+   50  pip install -r Work/Q2/requirements.txt
+   51  sudo apt update && sudo apt install cloud-init -y
+   52  nano Work/Q2/requirements.txt
+   53  pip install -r Work/Q2/requirements.txt
+   54  sudo apt update && sudo apt install command-not-found -y
+   55  nano Work/Q2/requirements.txt
+   56  pip install -r Work/Q2/requirements.txt
+   57  sudo apt update && sudo apt install python3-cups -y
+   58  nano Work/Q2/requirements.txt
+   59  pip install -r Work/Q2/requirements.txt
+   60  sudo apt update && sudo apt install libdbus-1-dev libdbus-glib-1-dev python3-dbus -y
+   61  pip install dbus-python
+   62  pip install -r Work/Q2/requirements.txt
+   63  pip install defer --no-cache-dir
+   64  nano Work/Q2/requirements.txt
+   65  \]
+   66  pip install -r Work/Q2/requirements.txt
+   67  sudo apt update && sudo apt install distro-info -y
+   68  nano Work/Q2/requirements.txt
+   69  pip install -r Work/Q2/requirements.txt
+   70  pip install kiwisolver --no-cache-dir
+   71  nano Work/Q2/requirements.txt
+   72  sudo apt update && sudo apt install -y python3-pip python3-venv python3-dev build-essential
+   73  pip install --upgrade pip setuptools wheel
+   74  pip install -r Work/Q2/requirements.txt
+   75  sudo apt update && sudo apt install language-selector-common -y
+   76  nano Work/Q2/requirements.txt
+   77  sudo apt update && sudo apt install -y     python3-apt python3-systemd python3-pycairo python3-dbus     ubuntu-drivers-common ubuntu-pro-client ufw unattended-upgrades xdg-utils
+   78  sudo apt update
+   79  sudo apt install -y python3-gi-cairo gir1.2-cairo-1.0 libcairo2-dev
+   80  sudo apt install -y     python3-apt python3-systemd python3-dbus     ubuntu-drivers-common ubuntu-pro-client ufw unattended-upgrades xdg-utils
+   81  pip install -r Work/Q2/requirements.txt
+   82  sudo apt update && sudo apt install -y liblouis-dev
+   83  dpkg -l | grep liblouis
+   84  nano Work/Q2/requirements.txt
+   85  y
+   86  pip install -r Work/Q2/requirements.txt
+   87  sudo apt update && sudo apt install -y python3-lz4
+   88  nano Work/Q2/requirements.txt
+   89  pip install -r Work/Q2/requirements.txt
+   90  sudo apt update && sudo apt install -y     libgirepository1.0-dev gir1.2-gtk-3.0 python3-gi python3-gi-cairo     gobject-introspection
+   91  pip install -r Work/Q2/requirements.txt
+   92  sudo apt update && sudo apt install -y python3-debian
+   93  nano Work/Q2/requirements.txt
+   94  pip install -r Work/Q2/requirements.txt
+   95  sudo apt update && sudo apt install -y libcups2-dev
+   96  pip install -r Work/Q2/requirements.txt
+   97  python3 Work/Q2/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+   98  mkdir -p Work/Q2/Diagrams_2
+   99  mv *.png Work/Q2/Diagrams_2/
+  100  tar -czvf BACKUPS/Diagrams_2_$(date +"%Y%m%d_%H%M%S").tar.gz Work/Q2/Diagrams_2/
+  101  history > Work/Q2/linux_history.log
+  102  git add .
+  103  git commit -m "completed q2 part 2 - created plant_plots.py and saved diagrams and compressed imgs"
+  104  git checkout main
+  105  git merge BR_Q2
+  106  git push origin main
+  107  git push origin BR_Q2
+  108  clear
+  109  git checkout -b BR_Q3
+  110  touch menu.sh
+  111  chmod +x menu.sh 
+  112  git checkout -b BR_CSV
+  113  nano menu.sh
+  114  bash menu.sh
+  115  history > Work/Q3/linux_history.log
+  116  git add .
+  117  clear
+  118  git checkout -b BR_Q3
+  119  touch menu.sh
+  120  chmod +x menu.sh
+  121  git checkout -b BR_CSV
+  122  nano menu.sh
+  123  bash menu.sh
+  124  history > Work/Q3/linux_history.log
