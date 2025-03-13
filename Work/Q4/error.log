@@ -1,0 +1,19 @@
+Error!! Csv file not found!
+Traceback (most recent call last):
+  File "/home/noam/LINUX_Course_Project/Work/Q4/../Q2/plant_plots.py", line 2, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+Error!! failed to generate diagrams for noam!
+Traceback (most recent call last):
+  File "/home/noam/LINUX_Course_Project/Work/Q4/../Q2/plant_plots.py", line 2, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+Error!! failed to generate diagrams for maria!
+usage: plant_plots.py [-h] --plant PLANT --height HEIGHT [HEIGHT ...] --leaf_count LEAF_COUNT
+                      [LEAF_COUNT ...] --dry_weight DRY_WEIGHT [DRY_WEIGHT ...]
+plant_plots.py: error: argument --height: invalid float value: '"30 40 50"'
+Error!! failed to generate diagrams for noam!
+usage: plant_plots.py [-h] --plant PLANT --height HEIGHT [HEIGHT ...] --leaf_count LEAF_COUNT
+                      [LEAF_COUNT ...] --dry_weight DRY_WEIGHT [DRY_WEIGHT ...]
+plant_plots.py: error: argument --height: invalid float value: '"50 60 70"'
+Error!! failed to generate diagrams for maria!
