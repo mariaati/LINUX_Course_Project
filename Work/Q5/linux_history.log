@@ -98,3 +98,130 @@
    98  docker cp temp_container:/container_history.log ~/LINUX_Course_Project/Work/Q5/
    99  docker rm -f temp_container
   100  history > linux_history.log
+  101  git add .
+  102  git commit -m "docker q5 p1: created python container and generated and combined images and saved history.."
+  103  git checkout main
+  104  git merge BR_Q5
+  105  git push origin main
+  106  git remote -v
+  107  ls -al ~/.ssh
+  108  ssh-keygen -t rsa -b 4096 -C "noamlew@icloud.com"
+  109  cat ~/.ssh/id_rsa.pub
+  110  git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+  111  git push origin main
+  112  clear
+  113  git push origin BR_Q5
+  114  git checkout -b BR_Q5B
+  115  cd ~/LINUX_Course_Project/Work/Q5
+  116  touch Dockerfile
+  117  nano Dockerfile
+  118  docker build -t plant_plot_image .
+  119  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  120  cp ../Q2/plant_plots.py .
+  121  cp ../Q2/requirements.txt .
+  122  ls -l
+  123  nano Dockerfile
+  124  docker build -t plant_plot_image .
+  125  nano Dockerfile
+  126  docker build -t plant_plot_image .
+  127  nano Dockerfile
+  128  docker build -t plant_plot_image .
+  129  clear
+  130  nano Dockerfile
+  131  docker build --no-cache -t my_project .
+  132  clear
+  133  nano Dockerfile
+  134  docker build -t plant_plot_image .
+  135  clear
+  136  nano Dockerfile
+  137  docker build --no-cache -t my_project .
+  138  clear
+  139  nano Dockerfile
+  140  docker build --no-cache -t my_project .
+  141  clear
+  142  nano Dockerfile
+  143  docker build --no-cache -t my_project .
+  144  docker images
+  145  clear
+  146  nano Dockerfile
+  147  docker run --rm my_project
+  148  docker run --rm -it my_project /bin/sh
+  149  ls -l ~/LINUX_Course_Project/Work/Q5/
+  150  nano Dockerfile
+  151  docker build -t plant_plot_image .
+  152  docker images
+  153  docker rmi my_project
+  154  nano Dockerfile
+  155  docker images
+  156  clear
+  157  docker run --rm plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  158  docker create --name temp_container plant_plot_image
+  159  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  160  docker run --rm -it plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  161  docker run --rm -it plant_plot_image /bin/sh
+  162  nano plant_plots.py
+  163  docker build -t plant_plot_image .
+  164  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  165  nano Dockerfile
+  166  docker build -t plant_plot_image .
+  167  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  168  docker images
+  169  docker run --rm -it plant_plot_image /bin/sh
+  170  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  171  docker run --rm -it plant_plot_image /bin/sh
+  172  ls -l /app
+  173  docker run --rm -it plant_plot_image /bin/sh
+  174  docker run --rm -it --entrypoint /bin/sh plant_plot_image
+  175  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  176  git checkout main
+  177  git branch -D BR_Q5B
+  178  git push origin --delete BR_Q5B
+  179  git branch -a
+  180  clear
+  181  git checkout main
+  182  git pull origin main 
+  183  clear
+  184  git checkout -b BR_Q5B
+  185  nano Dockerfile
+  186  docker build -t plant_plot_image .
+  187  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  188  docker run --rm plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  189  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  190  docker run --rm -it plant_plot_image /bin/sh
+  191  nano Dockerfile
+  192  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  193  nano Dockerfile
+  194  docker build -t plant_plot_image .
+  195  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  196  nano Dockerfile
+  197  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  198  docker rm -f temp_container
+  199  docker ps -a
+  200  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  201  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  202  docker start temp_container
+  203  docker exec -it temp_container /bin/sh
+  204  docker rm -f temp_container
+  205  docker run --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  206  docker exec -it temp_container /bin/sh
+  207  docker rm -f temp_container
+  208  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  209  docker exec -it temp_container /bin/sh
+  210  docker rm -f temp_container
+  211  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  212  docker exec -it temp_container /bin/sh
+  213  docker run --rm -it plant_plot_image /bin/sh
+  214  docker run --rm -it --entrypoint /bin/sh plant_plot_image
+  215  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  216  docker rm -f temp_container
+  217  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  218  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  219  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5 /bin/sh
+  220  docker rm -f temp_container
+  221  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5 /bin/sh
+  222  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  223  ls -l ~/LINUX_Course_Project/Work/Q5/
+  224  nano Dockerfile
+  225  clear
+  226  sudo chown noam:noam ~/LINUX_Course_Project/Work/Q5/Sunflower_*.png
+  227  history > linux_history.log
