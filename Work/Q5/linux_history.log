@@ -1,0 +1,100 @@
+    1  whoami
+    2  cd LINUX_Course_Project
+    3  find ~ -name "plant_plots.py"
+    4  find ~ -name "requirements.txt"
+    5  git checkout -b BR_Q4
+    6  cd Work/Q4
+    7  mkdir -p Work/Q4
+    8  cd Work/Q4
+    9  touch run_csv_script.sh
+   10  chmod +x run_csv_script.sh
+   11  nano run_csv_script.sh
+   12  bash run_csv_script.sh plants1.csv
+   13  mv ~/LINUX_Course_Project/plants1.csv ~/LINUX_Course_Project/Work/Q4/
+   14  bash run_csv_script.sh plants1.csv
+   15  cp ~/LINUX_Course_Project/Work/Q2/requirements.txt ~/LINUX_Course_Project/Work/Q4/
+   16  bash run_csv_script.sh plants1.csv
+   17  git add .
+   18  git commit -m "implemented the BASH scripts to run python for each Csv row..."
+   19  git checkout main
+   20  git merge BR_Q4
+   21  git push origin main
+   22  git push origin BR_Q4
+   23  cd ~/LINUX_Course_Project/Work/Q4
+   24  nano run_csv_script.sh
+   25  bash run_csv_script.sh -p plants1.csv -r ../Q2/requirements.txt -o NewDiagrams -b NewBackups
+   26  rm -rf Diagrams
+   27  bash run_csv_script.sh -p plants1.csv
+   28  history > linux_history.log
+   29  git add .
+   30  git commit -m "updated BASH script to support the flags and cleaned diagrams and saved Linux history..."
+   31  git checkout main
+   32  git merge BR_Q4
+   33  git push origin main
+   34  git push origin BR_Q4
+   35  clear
+   36  cd ~/LINUX_Course_Project
+   37  git checkout -b BR_Q5
+   38  mkdir -p Work/Q5
+   39  cd Work/Q5
+   40  docker run -it --name my_python_container ubuntu bash
+   41  sudo apt update && sudo apt install -y docker.io
+   42  sudo systemctl start docker
+   43  sudo systemctl enable docker
+   44  docker --version
+   45  sudo usermod -aG docker $USER
+   46  docker run hello-world
+   47  cd ~
+   48  git clone https://github.com/noam123/LINUX_Course_Project.git
+   49  git clone https://github.com/noamlewko/LINUX_Course_Project
+   50  clear
+   51  cd LINUX_Course_Project
+   52  git config --global user.name "Noam123"
+   53  git config --global user.email "noamlew@icloud.com"
+   54  git remote set-url origin https://github.com/noam123/LINUX_Course_Project.git
+   55  git remote -v
+   56  git push origin main
+   57  ssh-keygen -t ed25519 -C "noamlew@icloud.com"
+   58  cat ~/.ssh/id_ed25519.pub
+   59  ssh -T git@github.com
+   60  [200~git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+   61  git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+   62  git remote -v
+   63  git push origin main
+   64  git branch -a
+   65  [200~git fetch origin
+   66  git fetch origin
+   67  git branch -a
+   68  ip addr show eth0 | grep "inet "
+   69  clear
+   70  cd
+   71  ip addr show eth0 | grep "inet "
+   72  ip addr show
+   73  ip addr show ens33 | grep "inet "
+   74  clear
+   75  cd ~/LINUX_Course_Project
+   76  docker run hello-world
+   77  docker --version
+   78  sudo systemctl start docker
+   79  sudo systemctl enable docker
+   80  docker run hello-world
+   81  clear
+   82  git checkout -b BR_Q5
+   83  mkdir -p Work/Q5
+   84  cd Work/Q5
+   85  docker --version
+   86  docker run -it --name my_python_container ubuntu bash
+   87  docker start -ai my_python_container
+   88  docker --version
+   89  clear
+   90  docker cp my_python_container:/combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   91  docker cp my_python_container:/reversed_combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   92  docker cp my_python_container:/container_history.log ~/LINUX_Course_Project/Work/Q5/
+   93  ls -l ~/LINUX_Course_Project/Work/Q5/
+   94  docker commit my_python_container my_python_image
+   95  docker run --name temp_container -d my_python_image
+   96  docker cp temp_container:/combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   97  docker cp temp_container:/reversed_combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   98  docker cp temp_container:/container_history.log ~/LINUX_Course_Project/Work/Q5/
+   99  docker rm -f temp_container
+  100  history > linux_history.log
