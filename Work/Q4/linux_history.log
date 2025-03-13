@@ -1,0 +1,28 @@
+    1  whoami
+    2  cd LINUX_Course_Project
+    3  find ~ -name "plant_plots.py"
+    4  find ~ -name "requirements.txt"
+    5  git checkout -b BR_Q4
+    6  cd Work/Q4
+    7  mkdir -p Work/Q4
+    8  cd Work/Q4
+    9  touch run_csv_script.sh
+   10  chmod +x run_csv_script.sh
+   11  nano run_csv_script.sh
+   12  bash run_csv_script.sh plants1.csv
+   13  mv ~/LINUX_Course_Project/plants1.csv ~/LINUX_Course_Project/Work/Q4/
+   14  bash run_csv_script.sh plants1.csv
+   15  cp ~/LINUX_Course_Project/Work/Q2/requirements.txt ~/LINUX_Course_Project/Work/Q4/
+   16  bash run_csv_script.sh plants1.csv
+   17  git add .
+   18  git commit -m "implemented the BASH scripts to run python for each Csv row..."
+   19  git checkout main
+   20  git merge BR_Q4
+   21  git push origin main
+   22  git push origin BR_Q4
+   23  cd ~/LINUX_Course_Project/Work/Q4
+   24  nano run_csv_script.sh
+   25  bash run_csv_script.sh -p plants1.csv -r ../Q2/requirements.txt -o NewDiagrams -b NewBackups
+   26  rm -rf Diagrams
+   27  bash run_csv_script.sh -p plants1.csv
+   28  history > linux_history.log
