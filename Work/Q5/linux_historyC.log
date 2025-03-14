@@ -1,0 +1,381 @@
+    1  whoami
+    2  cd LINUX_Course_Project
+    3  find ~ -name "plant_plots.py"
+    4  find ~ -name "requirements.txt"
+    5  git checkout -b BR_Q4
+    6  cd Work/Q4
+    7  mkdir -p Work/Q4
+    8  cd Work/Q4
+    9  touch run_csv_script.sh
+   10  chmod +x run_csv_script.sh
+   11  nano run_csv_script.sh
+   12  bash run_csv_script.sh plants1.csv
+   13  mv ~/LINUX_Course_Project/plants1.csv ~/LINUX_Course_Project/Work/Q4/
+   14  bash run_csv_script.sh plants1.csv
+   15  cp ~/LINUX_Course_Project/Work/Q2/requirements.txt ~/LINUX_Course_Project/Work/Q4/
+   16  bash run_csv_script.sh plants1.csv
+   17  git add .
+   18  git commit -m "implemented the BASH scripts to run python for each Csv row..."
+   19  git checkout main
+   20  git merge BR_Q4
+   21  git push origin main
+   22  git push origin BR_Q4
+   23  cd ~/LINUX_Course_Project/Work/Q4
+   24  nano run_csv_script.sh
+   25  bash run_csv_script.sh -p plants1.csv -r ../Q2/requirements.txt -o NewDiagrams -b NewBackups
+   26  rm -rf Diagrams
+   27  bash run_csv_script.sh -p plants1.csv
+   28  history > linux_history.log
+   29  git add .
+   30  git commit -m "updated BASH script to support the flags and cleaned diagrams and saved Linux history..."
+   31  git checkout main
+   32  git merge BR_Q4
+   33  git push origin main
+   34  git push origin BR_Q4
+   35  clear
+   36  cd ~/LINUX_Course_Project
+   37  git checkout -b BR_Q5
+   38  mkdir -p Work/Q5
+   39  cd Work/Q5
+   40  docker run -it --name my_python_container ubuntu bash
+   41  sudo apt update && sudo apt install -y docker.io
+   42  sudo systemctl start docker
+   43  sudo systemctl enable docker
+   44  docker --version
+   45  sudo usermod -aG docker $USER
+   46  docker run hello-world
+   47  cd ~
+   48  git clone https://github.com/noam123/LINUX_Course_Project.git
+   49  git clone https://github.com/noamlewko/LINUX_Course_Project
+   50  clear
+   51  cd LINUX_Course_Project
+   52  git config --global user.name "Noam123"
+   53  git config --global user.email "noamlew@icloud.com"
+   54  git remote set-url origin https://github.com/noam123/LINUX_Course_Project.git
+   55  git remote -v
+   56  git push origin main
+   57  ssh-keygen -t ed25519 -C "noamlew@icloud.com"
+   58  cat ~/.ssh/id_ed25519.pub
+   59  ssh -T git@github.com
+   60  [200~git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+   61  git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+   62  git remote -v
+   63  git push origin main
+   64  git branch -a
+   65  [200~git fetch origin
+   66  git fetch origin
+   67  git branch -a
+   68  ip addr show eth0 | grep "inet "
+   69  clear
+   70  cd
+   71  ip addr show eth0 | grep "inet "
+   72  ip addr show
+   73  ip addr show ens33 | grep "inet "
+   74  clear
+   75  cd ~/LINUX_Course_Project
+   76  docker run hello-world
+   77  docker --version
+   78  sudo systemctl start docker
+   79  sudo systemctl enable docker
+   80  docker run hello-world
+   81  clear
+   82  git checkout -b BR_Q5
+   83  mkdir -p Work/Q5
+   84  cd Work/Q5
+   85  docker --version
+   86  docker run -it --name my_python_container ubuntu bash
+   87  docker start -ai my_python_container
+   88  docker --version
+   89  clear
+   90  docker cp my_python_container:/combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   91  docker cp my_python_container:/reversed_combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   92  docker cp my_python_container:/container_history.log ~/LINUX_Course_Project/Work/Q5/
+   93  ls -l ~/LINUX_Course_Project/Work/Q5/
+   94  docker commit my_python_container my_python_image
+   95  docker run --name temp_container -d my_python_image
+   96  docker cp temp_container:/combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   97  docker cp temp_container:/reversed_combined_image.png ~/LINUX_Course_Project/Work/Q5/
+   98  docker cp temp_container:/container_history.log ~/LINUX_Course_Project/Work/Q5/
+   99  docker rm -f temp_container
+  100  history > linux_history.log
+  101  git add .
+  102  git commit -m "docker q5 p1: created python container and generated and combined images and saved history.."
+  103  git checkout main
+  104  git merge BR_Q5
+  105  git push origin main
+  106  git remote -v
+  107  ls -al ~/.ssh
+  108  ssh-keygen -t rsa -b 4096 -C "noamlew@icloud.com"
+  109  cat ~/.ssh/id_rsa.pub
+  110  git remote set-url origin git@github.com:noamlewko/LINUX_Course_Project.git
+  111  git push origin main
+  112  clear
+  113  git push origin BR_Q5
+  114  git checkout -b BR_Q5B
+  115  cd ~/LINUX_Course_Project/Work/Q5
+  116  touch Dockerfile
+  117  nano Dockerfile
+  118  docker build -t plant_plot_image .
+  119  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  120  cp ../Q2/plant_plots.py .
+  121  cp ../Q2/requirements.txt .
+  122  ls -l
+  123  nano Dockerfile
+  124  docker build -t plant_plot_image .
+  125  nano Dockerfile
+  126  docker build -t plant_plot_image .
+  127  nano Dockerfile
+  128  docker build -t plant_plot_image .
+  129  clear
+  130  nano Dockerfile
+  131  docker build --no-cache -t my_project .
+  132  clear
+  133  nano Dockerfile
+  134  docker build -t plant_plot_image .
+  135  clear
+  136  nano Dockerfile
+  137  docker build --no-cache -t my_project .
+  138  clear
+  139  nano Dockerfile
+  140  docker build --no-cache -t my_project .
+  141  clear
+  142  nano Dockerfile
+  143  docker build --no-cache -t my_project .
+  144  docker images
+  145  clear
+  146  nano Dockerfile
+  147  docker run --rm my_project
+  148  docker run --rm -it my_project /bin/sh
+  149  ls -l ~/LINUX_Course_Project/Work/Q5/
+  150  nano Dockerfile
+  151  docker build -t plant_plot_image .
+  152  docker images
+  153  docker rmi my_project
+  154  nano Dockerfile
+  155  docker images
+  156  clear
+  157  docker run --rm plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  158  docker create --name temp_container plant_plot_image
+  159  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  160  docker run --rm -it plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  161  docker run --rm -it plant_plot_image /bin/sh
+  162  nano plant_plots.py
+  163  docker build -t plant_plot_image .
+  164  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  165  nano Dockerfile
+  166  docker build -t plant_plot_image .
+  167  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  168  docker images
+  169  docker run --rm -it plant_plot_image /bin/sh
+  170  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  171  docker run --rm -it plant_plot_image /bin/sh
+  172  ls -l /app
+  173  docker run --rm -it plant_plot_image /bin/sh
+  174  docker run --rm -it --entrypoint /bin/sh plant_plot_image
+  175  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  176  git checkout main
+  177  git branch -D BR_Q5B
+  178  git push origin --delete BR_Q5B
+  179  git branch -a
+  180  clear
+  181  git checkout main
+  182  git pull origin main 
+  183  clear
+  184  git checkout -b BR_Q5B
+  185  nano Dockerfile
+  186  docker build -t plant_plot_image .
+  187  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  188  docker run --rm plant_plot_image python /app/plant_plots.py --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  189  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  190  docker run --rm -it plant_plot_image /bin/sh
+  191  nano Dockerfile
+  192  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  193  nano Dockerfile
+  194  docker build -t plant_plot_image .
+  195  docker run --rm plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  196  nano Dockerfile
+  197  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  198  docker rm -f temp_container
+  199  docker ps -a
+  200  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  201  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  202  docker start temp_container
+  203  docker exec -it temp_container /bin/sh
+  204  docker rm -f temp_container
+  205  docker run --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  206  docker exec -it temp_container /bin/sh
+  207  docker rm -f temp_container
+  208  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  209  docker exec -it temp_container /bin/sh
+  210  docker rm -f temp_container
+  211  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  212  docker exec -it temp_container /bin/sh
+  213  docker run --rm -it plant_plot_image /bin/sh
+  214  docker run --rm -it --entrypoint /bin/sh plant_plot_image
+  215  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  216  docker rm -f temp_container
+  217  docker create --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  218  docker cp temp_container:/app/Sunflower_scatter.png ~/LINUX_Course_Project/Work/Q5/
+  219  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5 /bin/sh
+  220  docker rm -f temp_container
+  221  docker run -it --name temp_container plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5 /bin/sh
+  222  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app plant_plot_image --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
+  223  ls -l ~/LINUX_Course_Project/Work/Q5/
+  224  nano Dockerfile
+  225  clear
+  226  sudo chown noam:noam ~/LINUX_Course_Project/Work/Q5/Sunflower_*.png
+  227  history > linux_history.log
+  228  git add .
+  229  git commit -m "Docker q5 part B: created the container for python script and copied images back to WSL"
+  230  git checkout main
+  231  git merge BR_Q5B
+  232  git push origin main
+  233  git push origin BR_Q5B
+  234  clear
+  235  git checkout -b BR_Q5C
+  236  mkdir java_watermark
+  237  cd java_watermark
+  238  nano Watermark.java
+  239  nano Dockerfile
+  240  docker build -t java_watermark_image java_watermark/
+  241  docker build -t java_watermark_image .
+  242  nano Dockerfile
+  243  docker build -t java_watermark_image .
+  244  nano Dockerfile
+  245  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image /app "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  246  nano Dockerfile
+  247  docker build -t java_watermark_image .
+  248  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  249  nano Dockerfile
+  250  docker build -t java_watermark_image .
+  251  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  252  nano Dockerfile
+  253  docker build --no-cache -t java_watermark_image .
+  254  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  255  nano Dockerfile
+  256  docker build --no-cache -t java_watermark_image .
+  257  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  258  nano Dockerfile
+  259  docker build --no-cache -t java_watermark_image .
+  260  nano Dockerfile
+  261  docker build --no-cache -t java_watermark_image .
+  262  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  263  nano Dockerfile
+  264  docker build --no-cache -t java_watermark_image .
+  265  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  266  docker build --no-cache -t java_watermark_image .
+  267* docker build --no-cache -t java_watermark_image .
+
+  268  java -cp /app Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  269  nano Dockerfile
+  270  docker build --no-cache -t java_watermark_image .
+  271  docker run --rm -it java_watermark_image /bin/sh
+  272  nano Dockerfile
+  273* docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+
+  274  docker run --rm -it java_watermark_image /bin/sh
+  275  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  276  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image /app "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  277  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  278  nano Dockerfile
+  279  docker build --no-cache -t java_watermark_image .
+  280  nano Dockerfile
+  281  docker build --no-cache -t java_watermark_image .
+  282  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image /app "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  283  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  284  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  285  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  286  ls -l ~/LINUX_Course_Project/Work/Q5/
+  287  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  288  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  289  nano Dockerfile
+  290  docker build --no-cache -t java_watermark_image .
+  291  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  292  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  293  ls -l ~/LINUX_Course_Project/Work/Q5/
+  294  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  295  nano Dockerfile
+  296  docker build --no-cache -t java_watermark_image .
+  297  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  298  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  299  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  300  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/Sunflower_scatter.png" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  301  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  302  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  303  nano Dockerfile
+  304  docker build --no-cache -t java_watermark_image .
+  305  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  306  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  307  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  308  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  309  clear
+  310  ~/LINUX_Course_Project/Work/Q5/java_watermark/
+  311  docker build --no-cache -t java_watermark_image .
+  312  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  313  ls -l ~/LINUX_Course_Project/Work/Q5/
+  314  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app/Sunflower_scatter.png" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  315  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  316  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  317  ls -l ~/LINUX_Course_Project/Work/Q5/
+  318  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image java Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  319  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  320  java -cp /app Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  321  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  322  docker build --no-cache -t java_watermark_image .
+  323  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image java -cp /app Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  324  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  325  clear
+  326  docker build -t java_watermark_image ~/LINUX_Course_Project/Work/Q5/java_watermark/
+  327  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image /app "Noam Lewko - 12345678"
+  328  clear
+  329  nano Dockerfile
+  330  ls -l ~/LINUX_Course_Project/Work/Q5/java_watermark
+  331  cd ~/LINUX_Course_Project/Work/Q5/java_watermark0
+  332  cd ~/LINUX_Course_Project/Work/Q5/java_watermark
+  333  docker build --no-cache -t java_watermark_image .
+  334  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  335  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image java -cp /app Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  336  docker run --rm -it --entrypoint /bin/sh java_watermark_image
+  337  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  338  mv ~/LINUX_Course_Project/Work/Q5/java_watermark/Watermark.java ~/LINUX_Course_Project/Work/Q5/
+  339  mv ~/LINUX_Course_Project/Work/Q5/java_watermark/Dockerfile ~/LINUX_Course_Project/Work/Q5/
+  340  rm -rf ~/LINUX_Course_Project/Work/Q5/java_watermark/
+  341  cd ~/LINUX_Course_Project/Work/Q5/
+  342  docker build --no-cache -t java_watermark_image .
+  343  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  344  docker run --rm -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image java Watermark "/app" "Maria Atieh - 318087723 & Noam Lewkovich - 206436388"
+  345  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  346  sudo chown -R $USER:$USER ~/LINUX_Course_Project/Work/Q5/
+  347  nano run_all.sh
+  348  chmod +x run_all.sh
+  349  ./run_all.sh
+  350  ls -l ~/LINUX_Course_Project/Work/Q5/
+  351  history > linux_historyC.log
+  352  clear
+  353  rm -rf watermarked_*.png
+  354  rm -f Watermark.java 
+  355  rm -f Watermark.class 
+  356  rm -f run_all.sh 
+  357  rm -f linux_historyC.log
+  358  ls -l ~/LINUX_Course_Project/Work/Q5/
+  359  clear
+  360  git checkout -b BR_Q5C
+  361  nano Watermark.java
+  362  clear
+  363  git checkout -b BR_Q5C
+  364  nano Watermark.java
+  365  nano Dockerfile
+  366  docker build --no-cache -t java_watermark_image .
+  367  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  368  sudo chown -R $USER:$USER ~/LINUX_Course_Project/Work/Q5/
+  369  clear
+  370  git checkout -b BR_Q5C
+  371  nano Watermark.java
+  372  nano Dockerfile
+  373  docker build --no-cache -t java_watermark_image .
+  374  docker run --rm -it --entrypoint /bin/sh -v ~/LINUX_Course_Project/Work/Q5/:/app java_watermark_image
+  375  sudo chown -R $USER:$USER ~/LINUX_Course_Project/Work/Q5/
+  376  nano run_all.sh
+  377  chmod +x run_all.sh
+  378  ./run_all.sh
+  379  history > linux_historyC.log
